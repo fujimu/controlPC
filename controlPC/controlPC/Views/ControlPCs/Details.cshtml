@@ -1,0 +1,74 @@
+﻿@model controlPC.Models.ControlPC
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ControlPC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ipAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ipAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typeNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typeNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.memo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,123 @@
+﻿@model IEnumerable<controlPC.Models.ControlPC>
+
+@{
+    ViewBag.Title = "PC情報";
+}
+<head>
+    @Styles.Render("~/bundles/Index")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Index")
+</head>
+<h2>PC情報</h2>
+<fieldset>
+    <legend>検索条件</legend>
+    <div class="field-box">
+        <div class="field">
+            <div>
+                @Html.DisplayNameFor(model => model.id)
+                <input id="id" type="number" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.ipAdress)
+                <input id="ipAdress" type="text" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.classification)
+                <input id="classification" type="number" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.type)
+                <input id="type" type="text" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.typeNumber)
+                <input id="typeNumber" type="text" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.userName)
+                <input id="userName" type="text" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.pcName)
+                <input id="pcName" type="text" />
+            </div>
+            <div>
+            @Html.DisplayNameFor(model => model.memo)
+                <input id="memo" type="text" />
+            </div>
+            <button>検索</button>
+        </div>
+    </div>
+</fieldset>
+
+<p>
+    @Html.ActionLink("新規登録", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ipAdress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.classification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.typeNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.memo)
+        </th>
+        <th></th>
+    </tr>
+    <div id="data">
+        <div id="inner">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ipAdress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.classification)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.typeNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pcName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.memo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("編集", "Edit", new { id = item.id }) |
+                        @*@Html.ActionLink("詳細", "Details", new { id=item.id }) |*@
+                        @Html.ActionLink("削除", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+        </div>
+    </div>
+
+</table>

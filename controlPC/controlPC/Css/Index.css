@@ -1,0 +1,29 @@
+﻿body {
+}
+
+div.field-box
+{
+    border:1px solid;
+}
+
+div.field-box:last-child 
+{
+    border-right: none;
+}
+
+div.field-box
+{
+    display: inline-block;
+    border:1px solid #eee;
+    border-right: 1px solid #eee;
+    vertical-align: top;
+    margin-right: 8px;
+    width: 400px;
+}
+
+div.field > span.field-label
+{
+    display: inline-block;
+    width: 128px;
+    color: #696969;    
+}
